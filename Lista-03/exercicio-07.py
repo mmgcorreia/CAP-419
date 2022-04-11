@@ -11,12 +11,12 @@ print("Lembrando que as operações são: \n + => Adição \n - => Subtração \
 calc = input("Agora entre com a operação que deseja fazer. ")
 
 if(calc == "+"):
-    print("Adição: ", op1, "+", op2, "=", op1 + op2)
+    print("Adição: ", op1, "+", op2, "=",  "%.2f" % (op1 + op2))
 elif(calc == "-"):
-    print("Subtração: ", op1, "-", op2, "=", op1 - op2)
+    print("Subtração: ", op1, "-", op2, "=",  "%.2f" % (op1 - op2))
 elif(calc == "*"):
-    print("Multiplicação: ", op1, "*", op2, "=", op1 * op2)
+    print("Multiplicação: ", op1, "*", op2, "=",  "%.2f" % (op1 * op2))
 elif(calc == "/"):
-    print("Divisão: ", op1, "/", op2, "=", op1 / op2)
+    print("Divisão: ", op1, "/", op2, "=",  "%.2f" % (op1 / op2))
 else:
     print("Operação inválida.")                  

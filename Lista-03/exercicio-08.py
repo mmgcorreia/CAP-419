@@ -19,13 +19,17 @@ print("Ponto P2:")
 x2 = float(input("\t Coordenada X: "))
 y2 = float(input("\t Coordenada Y: "))
 
-# Usando da forma normal de Hessean
+if (x1 == x2 and y1 == y2):
+    print("Por favor informe novos pontos. Esses pontos são iguais e não geram uma reta.")
 
-h = ((y2 - y1) * (x - x1) - (x2 - x1) * (y - y1)) / (np.sqrt((x2 - x1)**2 + (y2 - y1)**2))
+else:
+    # Usando da forma normal de Hessean
 
-# Temos a distância 
+    h = ((y2 - y1) * (x - x1) - (x2 - x1) * (y - y1)) / (np.sqrt((x2 - x1)**2 + (y2 - y1)**2))
 
-dist = abs(h)
+    # Temos a distância 
 
-print("\nA menor distância entre o ponto P(", x,",",y,") e o " \
-"segmento de reta formado pelos pontos P1(", x1,",",y1,") e P2(", x2,",",y2,"):  ", dist)
+    dist = abs(h)
+
+    print("\nA menor distância entre o ponto P(", x,",",y,") e o " \
+    "segmento de reta formado pelos pontos P1(", x1,",",y1,") e P2(", x2,",",y2,"):  ", "%.2f" % dist)

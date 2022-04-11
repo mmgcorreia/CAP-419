@@ -19,14 +19,18 @@ x4 = float(input("\t Coordenada X: "))
 y4 = float(input("\t Coordenada Y: "))
 
 # Usando da forma normal de Hessean
+if (x1 == x2 and y1 == y2):
+    print("Por favor informe novos pontos. Esses pontos são iguais e não geram uma reta.")
 
-h3 = ((y2 - y1) * (x3 - x1) - (x2 - x1) * (y3 - y1)) / (np.sqrt((x2 - x1)**2 + (y2 - y1)**2))
-
-h4 = ((y2 - y1) * (x4 - x1) - (x2 - x1) * (y4 - y1)) / (np.sqrt((x2 - x1)**2 + (y2 - y1)**2))
-
-if(h3 == 0 or h4 == 0 or h3 * h4 < 0):
-    print("\nOs seguimentos de reta S e T se interceptam.")
 else:
-    print("\nOs seguimentos de reta S e T não se interceptam.")
+
+    h3 = ((y2 - y1) * (x3 - x1) - (x2 - x1) * (y3 - y1)) / (np.sqrt((x2 - x1)**2 + (y2 - y1)**2))
+
+    h4 = ((y2 - y1) * (x4 - x1) - (x2 - x1) * (y4 - y1)) / (np.sqrt((x2 - x1)**2 + (y2 - y1)**2))
+
+    if(h3 == 0 or h4 == 0 or h3 * h4 < 0):
+        print("\nOs seguimentos de reta S e T se interceptam.")
+    else:
+        print("\nOs seguimentos de reta S e T não se interceptam.")
 
 
